@@ -13,14 +13,16 @@ import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 import logo from "../public/logo.svg";
 import Typewriter from "@/components/Typewriter";
+import FallingSquares from "@/components/FallingSquares";
 
 export default function Home() {
   return (
     <div>
-      <main className="bg-gray-600 px-10 md:px-20 lg:px-40">
+      <FallingSquares />
+      <main className="px-10 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <Image src={logo} alt="logo" />
+            <Image height={36} src={logo} alt="logo" />
             <ul className="flex items-center">
               <li>
                 <a
@@ -32,17 +34,18 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="text-center p-10">
+          <div className="min-h-screen text-center p-10">
             <Typewriter />
             <p className="text-md py-5 leading-8 text-gray-200 md:text-xl max-w-xl mx-auto">
               Welcome to my site. please feel free to message me about site
               improvements and project ideas!
             </p>
+            <div className="text-5xl flex justify-center gap-10 py-3 text-gray-300">
+              <AiFillLinkedin />
+              <AiFillGithub />
+            </div>
           </div>
-          <div className="text-5xl flex justify-center gap-10 py-3 text-gray-300">
-            <AiFillLinkedin />
-            <AiFillGithub />
-          </div>
+
           <div className="relative bg-gradient-to-b from-teal-500  h-80 w-80 mt-20 mx-auto">
             <Image
               src={devdave}

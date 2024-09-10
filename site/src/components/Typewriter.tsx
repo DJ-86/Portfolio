@@ -13,7 +13,7 @@ const Typewriter = () => {
       "a front-end developer",
       "from the UK",
     ];
-    const speed = 85;
+    const speed = 80;
 
     const typeNextChar = () => {
       if (currentIndex < typeWriterStrings.length) {
@@ -38,7 +38,7 @@ const Typewriter = () => {
 
   return (
     <div>
-      <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+      <h2 className="text-5xl py-2 text-teal-300 font-medium md:text-6xl">
         {currentText}
       </h2>
     </div>
