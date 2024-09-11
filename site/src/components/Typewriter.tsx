@@ -13,7 +13,7 @@ const Typewriter = () => {
       "a front-end developer",
       "from the UK",
     ];
-    const speed = 85;
+    const speed = 80;
 
     const typeNextChar = () => {
       if (currentIndex < typeWriterStrings.length) {
@@ -37,8 +37,15 @@ const Typewriter = () => {
   }, [charIndex, currentIndex]); // No need to include typeWriterStrings in the dependency array
 
   return (
-    <div>
-      <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+    /*  <div className="relative inline-block">
+      <h2 className="text-5xl text-teal-300 font-medium md:text-6xl leading-snug">
+      {currentText}
+    </h2>
+    <div className="absolute top-0 right-0 bottom-0 w-1 bg-teal-300 animate-blink"></div>
+  </div>
+);*/
+    <div className="min-h-[225px]">
+      <h2 className="text-4xl text-teal-300 font-medium md:text-6xl">
         {currentText}
       </h2>
     </div>

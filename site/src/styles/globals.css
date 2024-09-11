@@ -22,3 +22,18 @@ a {
   font-family: "burtons";
   src: url("../app/fonts/Burtons.otf");
 }
+
+/* styles/globals.css */
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(0vw) translateY(120vh) rotate(500deg); /* Move from top to bottom of viewport */
+  }
+}
+
+.falling-squares {
+  position: relative;
+  overflow: hidden;
+}
