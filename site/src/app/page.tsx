@@ -14,14 +14,15 @@ import web6 from "../public/web6.png";
 import logo from "../public/logo.svg";
 import Typewriter from "@/components/Typewriter";
 import FallingSquares from "@/components/FallingSquares";
+import ButtonGroup from "@/components/ButtonGroup";
 
 export default function Home() {
   return (
     <div>
-      <FallingSquares />
-      <main className="px-10 md:px-20 lg:px-40">
+      <main>
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
+          <FallingSquares />
+          <nav className="py-10 mb-6 mx-10 flex justify-between">
             <Image height={36} src={logo} alt="logo" />
             <ul className="flex items-center">
               <li>
@@ -34,74 +35,150 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="min-h-screen text-center p-10">
+          <div className=" text-center p-5">
             <Typewriter />
             <p className="text-md py-5 leading-8 text-gray-200 md:text-xl max-w-xl mx-auto">
               Welcome to my site. please feel free to message me about site
-              improvements and project ideas!
+              improvements or opportunities.
             </p>
-            <div className="text-5xl flex justify-center gap-10 py-3 text-gray-300">
+            <div className="text-5xl flex justify-center gap-10 py-3 my-1 text-gray-300">
               <AiFillLinkedin />
               <AiFillGithub />
             </div>
           </div>
-
-          <div className="relative bg-gradient-to-b from-teal-500  h-80 w-80 mt-20 mx-auto">
-            <Image
-              src={devdave}
-              className="rounded-full p-8"
-              alt="Profile pic"
-            />
-          </div>
         </section>
         <section>
+          <section className="my-5 flex-col justify-between p-5">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+              <h2 className="text-3xl font-semibold mb-5">My Journey</h2>
+              <div className="timeline">
+                <div className="timeline-item">
+                  <h3 className="text-2xl font-medium">
+                    Early Work Experience
+                  </h3>
+                  <p>
+                    I dropped out of school at 16 to start working in various
+                    low-skilled jobs. I fitted windows and made black pudding to
+                    name a few.
+                  </p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <h3 className="text-2xl font-medium">Education & Training</h3>
+                <p>
+                  I returned to education where I studied mechanics, achieving
+                  City and Guilds Level 4. I then worked as a self-employed
+                  mechanic for a while before becoming a quality inspector.
+                </p>
+              </div>
+              <div className="timeline-item">
+                <h3 className="text-2xl font-medium">Career Transition</h3>
+                <p>
+                  I Started learning to code during COVID-19. I attended and
+                  passed a government-run bootcamp. I'm currently building
+                  projects while seeking a role in tech.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="my-10">
+            <h2 className="text-3xl font-semibold mb-5">Skills & Expertise</h2>
+            <ul className="list-disc ml-5">
+              <li>JavaScript, React, Next.js</li>
+              <li>HTML, CSS, Tailwind CSS</li>
+              <li>Problem-solving, Attention to Detail</li>
+            </ul>
+          </section>
+          <section className="my-10">
+            <h2 className="text-3xl font-semibold mb-5">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-medium">Project Name</h3>
+                <p>Brief description of the project and technologies used.</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="my-10">
+            <h2 className="text-3xl font-semibold mb-5">
+              Overcoming Challenges
+            </h2>
+            <p>
+              Share a brief story about the challenges you faced and how you
+              overcame them.
+            </p>
+          </section>
+
+          <section className="my-10 text-center">
+            <h2 className="text-3xl font-semibold mb-5">Let's Connect</h2>
+            <a
+              href="mailto:you@example.com"
+              className="bg-teal-500 text-white py-2 px-4 rounded-lg"
+            >
+              Contact Me
+            </a>
+          </section>
           <div>
-            <h3 className="text-3xl py-1">Looking for work!</h3>
+            <ButtonGroup />
+            <div>
+              <h3 className="text-3xl py-1">Looking for work!</h3>
+            </div>
             <p className="text-md py-2 leading-8 text-gray-200">
               Looking for a role in front end development ADD more paragraphs!!!
             </p>
-          </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <div className=" bg-gradient-to-b from-teal-500  h-80 w-80 mt-20 mx-auto">
               <Image
-                src={design}
-                width="100"
-                height="100"
-                className="mx-auto"
-                alt="design"
+                src={devdave}
+                height="80"
+                width="80"
+                className="rounded-full p-8"
+                alt="Profile pic"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
-              <p>Creating designs using modern UX practices</p>
-              <h4 className="py-4 text-teal-600">Design tools i use</h4>
-              <p className="text-gray-200 py-1">Figma</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                src={code}
-                width="100"
-                height="100"
-                className="mx-auto"
-                alt="design"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
-              <p>Creating designs using modern UX practices</p>
-              <h4 className="py-4 text-teal-600">Design tools i use</h4>
-              <p className="text-gray-200 py-1">Figma</p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                src={consulting}
-                width="100"
-                height="100"
-                className="mx-auto"
-                alt="design"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
-              <p className="text-md py-5 leading-8 text-gray-200">
-                Creating designs using modern UX practices
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools i use</h4>
-              <p className="text-gray-200 py-1">Figma</p>
+
+            <div className="lg:flex gap-10">
+              <div className="text-center shadow-lg p-10 rounded-xl my-10">
+                <Image
+                  src={design}
+                  width="100"
+                  height="100"
+                  className="mx-auto"
+                  alt="design"
+                />
+                <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
+                <p>Creating designs using modern UX practices</p>
+                <h4 className="py-4 text-teal-600">Design tools i use</h4>
+                <p className="text-gray-200 py-1">Figma</p>
+              </div>
+              <div className="text-center shadow-lg p-10 rounded-xl my-10">
+                <Image
+                  src={code}
+                  width="100"
+                  height="100"
+                  className="mx-auto"
+                  alt="design"
+                />
+                <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
+                <p>Creating designs using modern UX practices</p>
+                <h4 className="py-4 text-teal-600">Design tools i use</h4>
+                <p className="text-gray-200 py-1">Figma</p>
+              </div>
+              <div className="text-center shadow-lg p-10 rounded-xl my-10">
+                <Image
+                  src={consulting}
+                  width="100"
+                  height="100"
+                  className="mx-auto"
+                  alt="design"
+                />
+                <h3 className="text-lg font-medium pt-8 pb-2">Designs</h3>
+                <p className="text-md py-5 leading-8 text-gray-200">
+                  Creating designs using modern UX practices
+                </p>
+                <h4 className="py-4 text-teal-600">Design tools i use</h4>
+                <p className="text-gray-200 py-1">Figma</p>
+              </div>
             </div>
           </div>
         </section>
