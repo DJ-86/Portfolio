@@ -1,5 +1,10 @@
 // pages/index.js
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { IoLogoJavascript } from "react-icons/io";
+import { FaReact } from "react-icons/fa6";
+import { SiNextdotjs } from "react-icons/si";
+import { RiTailwindCssFill, RiHtml5Line } from "react-icons/ri";
+import { FaCss3 } from "react-icons/fa";
 import Image from "next/image";
 import devdave from "../public/profile.jpeg";
 import design from "../public/design.png";
@@ -15,7 +20,6 @@ import logo from "../public/logo.svg";
 import Typewriter from "@/components/Typewriter";
 import FallingSquares from "@/components/FallingSquares";
 import ButtonGroup from "@/components/ButtonGroup";
-
 export default function Home() {
   return (
     <div>
@@ -49,10 +53,10 @@ export default function Home() {
         </section>
         <section>
           <section className="my-5 flex-col justify-between p-5">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <div className="text-center shadow-lg p-10 rounded-xl my-5">
               <h2 className="text-3xl font-semibold mb-5">My Journey</h2>
               <div className="timeline">
-                <div className="timeline-item">
+                <div className="timeline-item mb-3 border-b-2 py-5">
                   <h3 className="text-2xl font-medium">
                     Early Work Experience
                   </h3>
@@ -63,7 +67,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="timeline-item">
+              <div className="timeline-item mb-3 border-b-2 py-5">
                 <h3 className="text-2xl font-medium">Education & Training</h3>
                 <p>
                   I returned to education where I studied mechanics, achieving
@@ -71,31 +75,55 @@ export default function Home() {
                   mechanic for a while before becoming a quality inspector.
                 </p>
               </div>
-              <div className="timeline-item">
+              <div className="timeline-item mb-3 border-b-2 py-5">
                 <h3 className="text-2xl font-medium">Career Transition</h3>
                 <p>
                   I Started learning to code during COVID-19. I attended and
-                  passed a government-run bootcamp. I'm currently building
+                  passed a government-run bootcamp. I&apos;m currently building
                   projects while seeking a role in tech.
                 </p>
               </div>
             </div>
           </section>
 
-          <section className="my-10">
-            <h2 className="text-3xl font-semibold mb-5">Skills & Expertise</h2>
-            <ul className="list-disc ml-5">
-              <li>JavaScript, React, Next.js</li>
-              <li>HTML, CSS, Tailwind CSS</li>
-              <li>Problem-solving, Attention to Detail</li>
+          <section className="text-center bg-gradient-to-b from-teal-500 p-10">
+            <ul className="list-none ml-5 text-4xl">
+              <li className="flex flex-row justify-around bg-green-500 py-2 mb-5 rounded-full">
+                <IoLogoJavascript /> <FaReact /> <SiNextdotjs />
+              </li>
+              <li className="flex flex-row justify-around bg-red-500 py-2 rounded-full">
+                <RiHtml5Line /> <FaCss3 /> <RiTailwindCssFill />
+              </li>
             </ul>
           </section>
           <section className="my-10">
             <h2 className="text-3xl font-semibold mb-5">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="project-card bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="text-2xl font-medium">Project Name</h3>
-                <p>Brief description of the project and technologies used.</p>
+                <h3 className="text-2xl font-medium">Portfolio</h3>
+                <p>
+                  The site you are on! Have a look at my github to see under the
+                  covers.
+                </p>
+              </div>
+              <div className="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-medium">ReadMe Generator</h3>
+                <p>My first attempt at something using Node.js</p>
+              </div>
+              <div className="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-medium">Hangman</h3>
+                <p>My own take on the classic game Hangman</p>
+              </div>
+              <div className="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-medium">Blog</h3>
+                <p>A CRUD application that uses React, MongoDB, & Node.js</p>
+              </div>
+              <div className="project-card bg-gray-100 p-6 rounded-lg shadow-md">
+                <h3 className="text-2xl font-medium">Reference Sheet Repo</h3>
+                <p>
+                  A react site that I use to create my own cheat sheets for
+                  technologies I use
+                </p>
               </div>
             </div>
           </section>
@@ -111,7 +139,7 @@ export default function Home() {
           </section>
 
           <section className="my-10 text-center">
-            <h2 className="text-3xl font-semibold mb-5">Let's Connect</h2>
+            <h2 className="text-3xl font-semibold mb-5">Let&apos;s Connect</h2>
             <a
               href="mailto:you@example.com"
               className="bg-teal-500 text-white py-2 px-4 rounded-lg"
